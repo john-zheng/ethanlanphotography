@@ -1,4 +1,18 @@
 Ethanlanphotography::Application.routes.draw do
+  get "cn/home"
+
+  get "cn/work"
+
+  get "cn/photo"
+
+  get "cn/video"
+
+  get "cn/price"
+
+  get "cn/about"
+
+  get "cn/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
