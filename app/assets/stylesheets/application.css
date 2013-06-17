@@ -19,16 +19,27 @@ html{
 	margin: 0;
   padding: 0;
   font-size: 13px;
-  color: #fff; 
+  color: #ccc;
   position: relative;
-  min-width: 1090px;
-  min-height: 100%;     
+  min-width: 1260px;
+  height: 100%;     
 }
 img {
-    border: none
+  border: none
 }
-
+a {
+	text-decoration: none;
+	color:#ccc;
+	font-size: 13px;
+}
+a:hover {
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
 body {
+	height:100%;
 	background-color: #000;
   background-size: cover, cover;
   background-repeat: no-repeat;
@@ -38,11 +49,35 @@ body {
 div{
 	display:block;
 }
+h1{
+ 	font-size: 22px;
+ 	//text-align: center;
+ 	margin-top: 16px;
+ 	margin-bottom: 20px;
+ 	//color: #666;
+}
+p{
+	font-size: 13px;
+ 	margin-bottom: 16px;
+ 	//color: #666;	
+ 	line-height: 1.8;
+}
+.clear{
+	clear:both;
+}
 body.home {
 	background-image: url("home_bg.jpg");   	
 }
-
-div#left {
+body.about {
+	background-image: url("about_bg.jpg");   	
+}
+body.contact {
+	background-image: url("contact_bg.jpg");   	
+}
+#main{
+	height:100%;
+}
+#left {
 	background: rgba(0,0,0,0.5);
 	color: #ccc;
 	height: 100%;
@@ -50,11 +85,58 @@ div#left {
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding:50px 0 0 32px;
+	padding:0 0 0 32px;
 }
+#left a#logo {
+	padding-top: 50px;
+	display: block;
+}
+#left nav{
+	/*position: absolute;
+	bottom:200px;
+	left:22px;*/
+}
+#left ul.menu{
+	margin-top: 50px;
+	padding-left: 10px;
+}
+#left ul.menu li{
+	margin:7px 0;
+}
+#left ul.menu li a{
+	color: #ccc;
+	font-size: 14px;
+}
+
 div#content {
-	background: #000;
+	//background: #fff;
+	//background: rgba(0,0,0,0.5);
 	margin: 0 auto;
-	padding: 0px;
-	width: 650px;
+	width: 820px;
+	height: 100%;
 }
+
+body.about div#content, body.contact div#content {
+	background: rgba(0,0,0,0.5);
+}
+#content #inner{
+	padding: 40px 20px;
+}
+#contact_details p{
+	margin-bottom: 0px;
+	height:20px;
+	clear:both;
+}
+#contact_details p label{
+	width:100px;
+	display: block;
+	float: left;
+}
+#contact_details p span{
+	display: block;
+	float: left;
+}
+#contact_form {
+	margin-top: 20px;
+}
+

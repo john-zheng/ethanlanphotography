@@ -10,17 +10,16 @@
 <body class="<%= params[:action] %>">
 	<div id="main">
 		<div id="left">
-			<div id="">
-				<%= link_to image_tag("logo.png", :width => 150), "/", :id => 'logo' %>
-				<nav>
-					<ul class="menu">
-
-					</ul>
-			</div>
+			<%= link_to image_tag("logo.png", :width => 150), "/", :id => 'logo' %>
+			<nav>
+				<%= render 'layouts/menu_cn' %>
+			</nav>	
 
 		</div>
 		<div id="content">
-			<%= yield %>
+			<div id="inner">
+				<%= yield %>
+			</div>
 		</div>
 	</div>
 	
