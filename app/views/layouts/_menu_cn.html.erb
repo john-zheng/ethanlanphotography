@@ -1,9 +1,10 @@
 <ul class="menu">
-	<li><%= link_to "首页", "/cn/home" %></li>
-	<li><%= link_to "作品", "/cn/work" %></li>
-	<li><%= link_to "摄影", "/cn/photo" %></li>
-	<li><%= link_to "摄像", "/cn/video" %></li>
-	<li><%= link_to "价格分类", "/cn/price" %></li>
-	<li><%= link_to "关于Ethan Lan", "/cn/about" %></li>
-	<li><%= link_to "联系我们", "/cn/contact" %></li>
+	<li><%= link_to "首页", :controller => "cn", :action => "home"  %></li>
+	<li><%= link_to "作品", :controller => "cn", :action => "gallery" %></li>
+	<li><%= link_to "摄影", :controller => "cn", :action => "photography" %></li>
+	<li><%= link_to "摄像", :controller => "cn", :action => "video" %></li>
+	<li><%= link_to "婚纱", :controller => "cn", :action => "bridal_dress" %></li>
+	<li><%= link_to "价格分类", :controller => "cn", :action => "package" %></li>
+	<li><%= link_to "关于Ethan Lan", :controller => "cn", :action => "about" %></li>
+	<li><%= link_to "联系我们", :controller => "cn", :action => "contact" %></li>
 </ul>

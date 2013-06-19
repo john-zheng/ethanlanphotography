@@ -1,17 +1,12 @@
 Ethanlanphotography::Application.routes.draw do
-  get "cn/home"
 
-  get "cn/work"
+  match 'cn/bridal-dress' => 'cn#bridal_dress'
 
-  get "cn/photo"
+  match ':controller/:action/:category'
 
-  get "cn/video"
+  match ':controller/:action', :via => :get
 
-  get "cn/price"
-
-  get "cn/about"
-
-  get "cn/contact"
+ 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

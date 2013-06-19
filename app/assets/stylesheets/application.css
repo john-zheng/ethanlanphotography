@@ -21,7 +21,7 @@ html{
   font-size: 13px;
   color: #ccc;
   position: relative;
-  min-width: 1260px;
+  min-width: 1200px;
   height: 100%;     
 }
 img {
@@ -112,7 +112,7 @@ div#content {
 	//background: #fff;
 	//background: rgba(0,0,0,0.5);
 	margin: 0 auto;
-	width: 820px;
+	width: 760px;
 	height: 100%;
 }
 

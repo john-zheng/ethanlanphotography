@@ -3,20 +3,24 @@ class CnController < ApplicationController
     @title = "Home"
   end
 
-  def work
-    @title = "Work"
+  def gallery
+    @title = "Gallery"
   end
 
-  def photo
-    @title = "Photo"
+  def photography
+    @title = "Photography"
   end
 
   def video
     @title = "Video"
   end
 
-  def price
-    @title = "Price"
+  def bridal_dress
+    @title = "Bridal Dress"
+  end
+
+  def package
+    @title = "Package"
   end
 
   def about
