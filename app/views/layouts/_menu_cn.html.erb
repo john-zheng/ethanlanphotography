@@ -4,7 +4,16 @@
 	<li><%= link_to "摄影", :controller => "cn", :action => "photography" %></li>
 	<li><%= link_to "摄像", :controller => "cn", :action => "video" %></li>
 	<li><%= link_to "婚纱", :controller => "cn", :action => "bridal_dress" %></li>
-	<li><%= link_to "价格分类", :controller => "cn", :action => "package" %></li>
+	<li>
+		<%= link_to "价格分类", :controller => "cn", :action => "package" %>
+		<ul class="menu-2">
+			<li><%= link_to "婚纱摄影", :controller => "cn", :action => "package", :category => "pre-wedding"%></li>
+			<li><%= link_to "婚礼跟拍", :controller => "cn", :action => "package", :category => "wedding"%></li>
+			<li><%= link_to "人像写真摄影", :controller => "cn", :action => "package", :category => "portrait"%></li>
+			<li><%= link_to "商业广告摄影 ", :controller => "cn", :action => "package", :category => "commercial-advertsing-photography"%></li>
+			<li><%= link_to "其他产品价格", :controller => "cn", :action => "package", :category => "other-product-price"%></li>
+		</ul>
+	</li>
 	<li><%= link_to "关于Ethan Lan", :controller => "cn", :action => "about" %></li>
 	<li><%= link_to "联系我们", :controller => "cn", :action => "contact" %></li>
 </ul>

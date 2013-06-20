@@ -21,8 +21,9 @@ html{
   font-size: 13px;
   color: #ccc;
   position: relative;
-  min-width: 1200px;
-  height: 100%;     
+  height:100%;
+  min-width: 1200px; 
+  display:block; 
 }
 img {
   border: none
@@ -50,11 +51,15 @@ div{
 	display:block;
 }
 h1{
- 	font-size: 22px;
+ 	font-size: 20px;
  	//text-align: center;
  	margin-top: 16px;
  	margin-bottom: 20px;
  	//color: #666;
+}
+h2{
+ 	font-size: 16px;
+ 	margin-bottom: 10px;
 }
 p{
 	font-size: 13px;
@@ -74,18 +79,27 @@ body.about {
 body.contact {
 	background-image: url("contact_bg.jpg");   	
 }
+body.package {
+	background-image: url("package_bg.jpg");   	
+}
 #main{
 	height:100%;
 }
 #left {
-	background: rgba(0,0,0,0.5);
 	color: #ccc;
-	height: 100%;
-	width: 188px;
+	min-height: 100%;
+	width: 220px;
 	position: absolute;
 	top: 0;
 	left: 0;
+}
+#left #left-inner{
+	background: rgba(0,0,0,0.5);
+	min-height: 100%;
+	position:fixed;
+	top:0;
 	padding:0 0 0 32px;
+	width: 188px;
 }
 #left a#logo {
 	padding-top: 50px;
@@ -95,17 +109,22 @@ body.contact {
 	/*position: absolute;
 	bottom:200px;
 	left:22px;*/
-}
-#left ul.menu{
 	margin-top: 50px;
 	padding-left: 10px;
+}
+#left ul.menu{
+	
 }
 #left ul.menu li{
 	margin:7px 0;
 }
 #left ul.menu li a{
 	color: #ccc;
-	font-size: 14px;
+	font-size: 13px;
+}
+
+#left ul.menu li ul{
+	padding-left: 15px;
 }
 
 div#content {
@@ -113,14 +132,16 @@ div#content {
 	//background: rgba(0,0,0,0.5);
 	margin: 0 auto;
 	width: 760px;
-	height: 100%;
+	min-height: 100%;
 }
 
-body.about div#content, body.contact div#content {
+body.about div#content, 
+body.contact div#content, 
+body.package div#content {
 	background: rgba(0,0,0,0.5);
 }
 #content #inner{
-	padding: 40px 20px;
+	padding: 40px 40px;
 }
 #contact_details p{
 	margin-bottom: 0px;
@@ -139,4 +160,9 @@ body.about div#content, body.contact div#content {
 #contact_form {
 	margin-top: 20px;
 }
+
+ul.list{
+	margin-bottom:20px;
+}
+
 

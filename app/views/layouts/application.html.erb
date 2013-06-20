@@ -10,11 +10,12 @@
 <body class="<%= params[:action] %>">
 	<div id="main">
 		<div id="left">
-			<%= link_to image_tag("logo.png", :width => 150), "/", :id => 'logo' %>
-			<nav>
-				<%= render 'layouts/menu_cn' %>
-			</nav>	
-
+			<div id="left-inner">
+				<%= link_to image_tag("logo.png", :width => 150), "/", :id => 'logo' %>
+				<nav>
+					<%= render 'layouts/menu_cn' %>
+				</nav>	
+			</div>
 		</div>
 		<div id="content">
 			<div id="inner">
