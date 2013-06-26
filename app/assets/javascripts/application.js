@@ -12,4 +12,26 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+// require_tree .
+
+$(document).ready(function () {
+  $('#dropdown > li > a').click(function(){ 
+
+      $('#dropdown li ul').slideUp();
+      if (!$(this).next().is(':visible')){
+      	$(this).next().slideDown();
+      }
+
+  });
+
+  $('#dropdown > li > ul > li > a').click(function(){
+
+      $('#dropdown > li > ul > li > ul').slideUp();
+      if (!$(this).next().is(':visible')){
+      	$(this).next().slideDown();
+      }
+
+  });
+
+  
+});

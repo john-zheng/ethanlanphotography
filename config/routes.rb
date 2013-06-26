@@ -1,7 +1,7 @@
 Ethanlanphotography::Application.routes.draw do
 
   match 'cn/bridal-dress' => 'cn#bridal_dress'
-
+  match ':controller/:action/:category/:number'
   match ':controller/:action/:category'
 
   match ':controller/:action', :via => :get

@@ -9,7 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ * require_tree .
  */
 *{
 	margin: 0;
@@ -71,16 +71,16 @@ p{
 	clear:both;
 }
 body.home {
-	background-image: url("home_bg.jpg");   	
+	//background-image: url("home_bg_S.jpg");   	
 }
 body.about {
-	background-image: url("about_bg.jpg");   	
+	background-image: url("about_bg_S.jpg");   	
 }
 body.contact {
-	background-image: url("contact_bg.jpg");   	
+	background-image: url("contact_bg_S.jpg");   	
 }
 body.package {
-	background-image: url("package_bg.jpg");   	
+	background-image: url("package_bg_S.jpg");   	
 }
 #main{
 	height:100%;
@@ -127,6 +127,15 @@ body.package {
 	padding-left: 15px;
 }
 
+/*dropdown menu css*/
+#dropdown li ul {
+  display: none; // used to hide sub-menus
+}
+#dropdown li.active > ul{
+	display: block;
+}
+/*end of menu*/
+
 div#content {
 	//background: #fff;
 	//background: rgba(0,0,0,0.5);
@@ -140,6 +149,13 @@ body.contact div#content,
 body.package div#content {
 	background: rgba(0,0,0,0.5);
 }
+
+body.gallery div#content {
+	width: auto;
+	padding-left: 220px;
+	padding-right: 20px;
+}
+
 #content #inner{
 	padding: 40px 40px;
 }
@@ -165,4 +181,12 @@ ul.list{
 	margin-bottom:20px;
 }
 
+.gallery-canvas {
+	padding:100px 0 0 0;
+}
+.gallery-canvas .fancybox-thumb{
+	margin:0 9px 6px 0 ;
+	display: block;
+	float:left;
+}
 

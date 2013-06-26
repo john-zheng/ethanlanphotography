@@ -4,7 +4,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>Ethanlanphotography | <%= @title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= yield :css_extra  %>
   <%= javascript_include_tag "application" %>
+  <%= yield :js_extra  %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= params[:action] %>">

@@ -1,2 +1,38 @@
-<h1>Cn#work</h1>
-<p>Find me in app/views/cn/work.html.erb</p>
+<% content_for :js_extra  do %>
+	<%= javascript_include_tag "jquery.fancybox.pack", "jquery.fancybox-thumbs" %>
+		<script type="text/javascript">
+
+			$(document).ready(function() {
+					$(".fancybox-thumb").fancybox({
+						beforeShow: function () {
+	            /* Disable right click */
+	            $.fancybox.wrap.bind("contextmenu", function (e) {
+	                    return false; 
+	            });
+	        },
+	        padding : 0,
+					prevEffect	: 'none',
+					nextEffect	: 'none',
+					helpers	: {
+						title	: {
+							type: 'outside'
+						},
+						thumbs	: {
+							height	: 50
+						}
+					}
+
+				});
+			});
+		</script>
+<% end %>
+
+<% content_for :css_extra  do %>
+	<%= stylesheet_link_tag "jquery.fancybox", "jquery.fancybox-thumbs", :media => "all" %>
+<% end %>
+
+<div class="gallery-canvas">
+	<% @images_full.each do |image| %>
+   <%= link_to image_tag("gallery/thumbnail/#{image.split('/').last.sub('.','_s.')}", :height => '110'), "/assets/gallery/full/#{image.split('/').last}", :class=>'fancybox-thumb', :rel=>'fancybox-thumb'%>
+ 	<% end %>
+</div>

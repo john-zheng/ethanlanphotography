@@ -1,19 +1,56 @@
-<ul class="menu">
-	<li><%= link_to "首页", :controller => "cn", :action => "home"  %></li>
-	<li><%= link_to "作品", :controller => "cn", :action => "gallery" %></li>
-	<li><%= link_to "摄影", :controller => "cn", :action => "photography" %></li>
-	<li><%= link_to "摄像", :controller => "cn", :action => "video" %></li>
-	<li><%= link_to "婚纱", :controller => "cn", :action => "bridal_dress" %></li>
-	<li>
-		<%= link_to "价格分类", :controller => "cn", :action => "package" %>
+<ul class="menu" id="dropdown">
+	<li><%= link_to "首页", "/cn/home"  %></li>
+	<li><%= link_to "作品", "/cn/gallery" %></li>
+	<li class="<%= (current_page?(:action => 'photography')) ? 'active':'' %>">
+		<%= link_to "摄影", "javascript:void(0);" %>
 		<ul class="menu-2">
-			<li><%= link_to "婚纱摄影", :controller => "cn", :action => "package", :category => "pre-wedding"%></li>
-			<li><%= link_to "婚礼跟拍", :controller => "cn", :action => "package", :category => "wedding"%></li>
-			<li><%= link_to "人像写真摄影", :controller => "cn", :action => "package", :category => "portrait"%></li>
-			<li><%= link_to "商业广告摄影 ", :controller => "cn", :action => "package", :category => "commercial-advertsing-photography"%></li>
-			<li><%= link_to "其他产品价格", :controller => "cn", :action => "package", :category => "other-product-price"%></li>
+
+			<li class="<%= (current_page?(:category => 'pre-wedding')) ? 'active':'' %>">
+				<%= link_to "婚纱摄影", "javascript:void(0);" %>
+				<ul class="menu-3 ">
+					<li><%= link_to "Number1", "/cn/photography/pre-wedding/1" %></li>
+					<li><%= link_to "Number2", "/cn/photography/pre-wedding/2" %></li>
+					<li><%= link_to "Number3", "/cn/photography/pre-wedding/3" %></li>
+					<li><%= link_to "Number4", "/cn/photography/pre-wedding/4" %></li>
+					<li><%= link_to "Number5", "/cn/photography/pre-wedding/5" %></li>
+				</ul>
+			</li>
+
+			<li class="<%= (current_page?(:category => 'wedding')) ? 'active':'' %>">
+				<%= link_to "婚礼跟拍", "javascript:void(0);" %>
+				<ul class="menu-3 ">
+					<li><%= link_to "Number1", "/cn/photography/wedding/1" %></li>
+					<li><%= link_to "Number2", "/cn/photography/wedding/2" %></li>
+					<li><%= link_to "Number3", "/cn/photography/wedding/3" %></li>
+				</ul>
+			</li>
+
+			<li><%= link_to "人像写真摄影",  "/cn/photography/portrait"  %></li>
+
+			<li><%= link_to "商业广告摄影 ",  "/cn/photography/commercial-advertsing-photography"  %></li>
+
+			<li><%= link_to "创意摄影", "/cn/photography/designed-photography" %></li>
+			
 		</ul>
 	</li>
-	<li><%= link_to "关于Ethan Lan", :controller => "cn", :action => "about" %></li>
-	<li><%= link_to "联系我们", :controller => "cn", :action => "contact" %></li>
+	<li class="<%= (current_page?(:action => 'video')) ? 'active':'' %>">
+		<%= link_to "摄像", "javascript:void(0);" %>
+		<ul class="menu-2">
+			<li><%= link_to "爱情电影", "/cn/video/love-story-movie" %></li>
+			<li><%= link_to "婚礼摄像", "/cn/video/wedding-video" %></li>
+		</ul>
+	</li>
+	<li><%= link_to "婚纱", "/cn/bridal-dress" %></li>
+	<li class="<%= (current_page?(:action => 'package')) ? 'active':'' %>">
+		<%= link_to "价格分类", "javascript:void(0);" %>
+		<ul class="menu-2">
+			<li><%= link_to "婚纱摄影", "/cn/package/pre-wedding" %></li>
+			<li><%= link_to "婚礼跟拍", "/cn/package/wedding" %></li>
+			<li><%= link_to "人像写真摄影",  "/cn/contact"  %></li>
+			<li><%= link_to "商业广告摄影 ",  "/cn/contact"  %></li>
+			<li><%= link_to "其他产品价格", "/cn/package/other-product-price" %></li>
+		</ul>
+	</li>
+	<li><%= link_to "关于Ethan Lan", "/cn/about" %></li>
+	<li><%= link_to "联系我们", "/cn/contact" %></li>
 </ul>

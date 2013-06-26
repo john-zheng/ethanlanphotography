@@ -5,6 +5,7 @@ class CnController < ApplicationController
 
   def gallery
     @title = "Gallery"
+    @images_full = Dir.glob("app/assets/images/gallery/full/*.jpg")
   end
 
   def photography
