@@ -94,7 +94,7 @@ body.package {
 	left: 0;
 }
 #left #left-inner{
-	background: rgba(0,0,0,0.5);
+	background: url("black.png");  
 	min-height: 100%;
 	position:fixed;
 	top:0;
@@ -149,7 +149,8 @@ body.contact div#content,
 body.message div#content, 
 body.thankyou div#content, 
 body.package div#content {
-	background: rgba(0,0,0,0.5);
+	//background: rgba(0,0,0,0.5);
+	background: url("black.png"); 
 }
 
 body.gallery div#content {
@@ -225,8 +226,8 @@ padding:2px;
 border:solid 1px #ccc;
 width:200px;
 height:14px;
-background: rgba(0, 0, 0, 0);
-//background: #000;
+//background: rgba(0, 0, 0, 0);
+background:transparent;
 }
 #contact_form form textarea{
 float:left;
@@ -237,7 +238,8 @@ padding:2px;
 border:solid 1px #ccc;
 width:300px;
 height:80px;
-background: rgba(0, 0, 0, 0);
+//background: rgba(0, 0, 0, 0);
+background:transparent;
 //background: #000;
 }
 #contact_form .button{
@@ -254,7 +256,8 @@ border:solid 1px #ccc;
 width:80px;
 height:20px;
 margin-left:66px;
-background: rgba(0, 0, 0, 0);
+//background: rgba(0, 0, 0, 0);
+background:transparent;
 //background: #000;
 cursor: pointer;
 }
