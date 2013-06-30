@@ -1,0 +1,38 @@
+<%= form_for inquiry, url: {controller: "cn", action: "message"} do |f| %>
+  <% if inquiry.errors.any? %>
+    <ul>
+      <% inquiry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  
+  <div class="row" style="display: none;">
+    <%= f.label :nickname %>
+    <%= f.text_field :nickname %>
+  </div>
+  
+  <div class="row" >
+    <%= f.label "姓名*" %>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="row">
+    <%= f.label "电子邮件*" %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="row">
+    <%= f.label "联系电话" %>
+    <%= f.text_field :phone %>
+  </div>
+  
+  <div class="row_message">
+    <%= f.label "消息" %>
+    <%= f.text_area :message %>
+  </div>
+  
+  <div class="button">
+    <%= f.submit "发送" %>
+  </div>
+<% end %>

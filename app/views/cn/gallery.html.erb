@@ -7,7 +7,7 @@
 						beforeShow: function () {
 	            /* Disable right click */
 	            $.fancybox.wrap.bind("contextmenu", function (e) {
-	                    return false; 
+	                    //return false; 
 	            });
 	        },
 	        padding : 0,
@@ -33,6 +33,6 @@
 
 <div class="gallery-canvas">
 	<% @images_full.each do |image| %>
-   <%= link_to image_tag("gallery/thumbnail/#{image.split('/').last.sub('.','_s.')}", :height => '110'), "/assets/gallery/full/#{image.split('/').last}", :class=>'fancybox-thumb', :rel=>'fancybox-thumb'%>
+   <%= link_to image_tag("gallery/thumbnail/#{image}", :height => '110'), "/assets/gallery/full/#{image}", :class=>'fancybox-thumb', :rel=>'fancybox-thumb'%>
  	<% end %>
 </div>

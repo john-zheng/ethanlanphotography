@@ -1,4 +1,34 @@
-<h1>联系我们</h1>
+<% content_for :js_extra  do %>
+	<%= javascript_include_tag "jquery.validate.min" %>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				// validate signup form on keyup and submit
+				$("#new_inquiry").validate({
+
+				
+
+				});
+
+				$( "#inquiry_name" ).rules( "add", {
+				  required: true,
+				  messages: {
+				    required: "请输入您的姓名",
+				  }
+				});
+
+				$( "#inquiry_email" ).rules( "add", {
+				  required: true,
+				  email: true,
+				  messages: {
+				    required: "请提供您的EMAIL地址",
+				    email: "请填写有效的EMAIL地址"
+				  }
+				});
+			});
+		</script>
+<% end %>
+<div style="height:30px;">&nbsp;</div>
+<h2>联系方式</h2>
 <div id="contact_details">
 	<p><label>所在地</label><span>Australia Melbourne</span></p>
   <p><label>微信号</label><span>lanzhenggang</span></p>
@@ -8,6 +38,9 @@
 </div>
 <div class="clear"></div>
 <div id="contact_form">
-<h2>预约档期——Book a sitting</h2>
+<h2>联系我们</h2>
+
+<%= render 'form', :inquiry => @inquiry %>
+
 </div>
 

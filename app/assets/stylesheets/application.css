@@ -76,7 +76,7 @@ body.home {
 body.about {
 	background-image: url("about_bg_S.jpg");   	
 }
-body.contact {
+body.contact, body.message, body.thankyou {
 	background-image: url("contact_bg_S.jpg");   	
 }
 body.package {
@@ -146,18 +146,21 @@ div#content {
 
 body.about div#content, 
 body.contact div#content, 
+body.message div#content, 
+body.thankyou div#content, 
 body.package div#content {
 	background: rgba(0,0,0,0.5);
 }
 
 body.gallery div#content {
-	width: auto;
-	padding-left: 220px;
-	padding-right: 20px;
+	//width: auto;
+	padding-left: 60px;
+	//padding-right: 40px;
+	width:950px;
 }
 
 #content #inner{
-	padding: 40px 40px;
+	padding: 40px 40px 40px 40px;
 }
 #contact_details p{
 	margin-bottom: 0px;
@@ -173,20 +176,93 @@ body.gallery div#content {
 	display: block;
 	float: left;
 }
-#contact_form {
-	margin-top: 20px;
-}
+
 
 ul.list{
 	margin-bottom:20px;
 }
 
 .gallery-canvas {
-	padding:100px 0 0 0;
+	padding:80px 0 0 0;
 }
 .gallery-canvas .fancybox-thumb{
 	margin:0 9px 6px 0 ;
 	display: block;
 	float:left;
+}
+#contact_form {
+	margin-top: 50px;
+}
+#contact_form .row{
+	display:block;
+	clear:both;
+	height:20px;
+	margin:5px 0;
+}
+#contact_form .row_message{
+	display:block;
+	clear:both;
+	height:86px;
+	margin:5px 0;
+}
+#contact_form form label{
+display:block;
+font-size:12px;
+font-weight:bold;
+text-align:right;
+width:56px;
+height:18px;
+padding-top:2px;
+margin-right:10px;
+float:left;
+}
+#contact_form form input[type="text"]{
+float:left;
+color:#ccc;
+font-size:12px;
+padding:2px;
+//border:0 none;
+border:solid 1px #ccc;
+width:200px;
+height:14px;
+background: rgba(0, 0, 0, 0);
+//background: #000;
+}
+#contact_form form textarea{
+float:left;
+color:#ccc;
+font-size:12px;
+padding:2px;
+//border:0 none;
+border:solid 1px #ccc;
+width:300px;
+height:80px;
+background: rgba(0, 0, 0, 0);
+//background: #000;
+}
+#contact_form .button{
+	height:22px;
+	margin:5px 0;
+	clear:both;
+}
+#contact_form .button input[type="submit"]{
+float:left;
+color:#ccc;
+font-size:12px;
+//border:0 none;
+border:solid 1px #ccc;
+width:80px;
+height:20px;
+margin-left:66px;
+background: rgba(0, 0, 0, 0);
+//background: #000;
+cursor: pointer;
+}
+
+#new_inquiry label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	font-style: italic;
 }
 

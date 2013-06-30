@@ -1,11 +1,12 @@
 Ethanlanphotography::Application.routes.draw do
 
   match 'cn/bridal-dress' => 'cn#bridal_dress'
+
+ 
   match ':controller/:action/:category/:number'
   match ':controller/:action/:category'
 
-  match ':controller/:action', :via => :get
-
+  match ':controller/:action'
  
 
   # The priority is based upon order of creation:
