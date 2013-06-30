@@ -212,8 +212,9 @@ font-size:12px;
 font-weight:bold;
 text-align:right;
 width:56px;
-height:18px;
-padding-top:2px;
+height:20px;
+line-height: 20px;
+
 margin-right:10px;
 float:left;
 }
@@ -255,6 +256,7 @@ font-size:12px;
 border:solid 1px #ccc;
 width:80px;
 height:20px;
+line-height: 20px;
 margin-left:66px;
 //background: rgba(0, 0, 0, 0);
 background:transparent;
