@@ -109,11 +109,11 @@ body.package {
 	/*position: absolute;
 	bottom:200px;
 	left:22px;*/
-	margin-top: 50px;
-	padding-left: 10px;
+	
 }
 #left ul.menu{
-	
+	margin-top: 50px;
+	padding-left: 10px;
 }
 #left ul.menu li{
 	margin:7px 0;
