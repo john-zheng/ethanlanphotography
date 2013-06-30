@@ -97,7 +97,7 @@ body.package {
         top: 0;
         left: 0;
         z-index: -999;
-      }
+}
 
 @media screen and (max-width: 1200px) { /* Specific to this particular image */
         #bg-image {
