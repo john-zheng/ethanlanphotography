@@ -74,14 +74,41 @@ body.home {
 	//background-image: url("home_bg_S.jpg");   	
 }
 body.about {
-	background-image: url("about_bg_S.jpg");   	
+	//background-image: url("about_bg_S.jpg");   	
 }
 body.contact, body.message, body.thankyou {
-	background-image: url("contact_bg_S.jpg");   	
+	//background-image: url("contact_bg_S.jpg");   	
 }
 body.package {
-	background-image: url("package_bg_S.jpg");   	
+	//background-image: url("package_bg_S.jpg");   	
 }
+
+#bg-image {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1200px;
+        
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+        
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -999;
+      }
+
+@media screen and (max-width: 1200px) { /* Specific to this particular image */
+        #bg-image {
+          left: 50%;
+          margin-left: -600px;   /* 50% */
+        }
+      }
+
+
+
+
 #main{
 	height:100%;
 }
