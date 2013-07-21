@@ -125,8 +125,8 @@ body.package {
 	min-height: 100%;
 	position:fixed;
 	top:0;
-	padding:0 0 0 32px;
-	width: 188px;
+	padding:0 0 0 25px;
+	width: 195px;
 }
 #left a#logo {
 	padding-top: 50px;
