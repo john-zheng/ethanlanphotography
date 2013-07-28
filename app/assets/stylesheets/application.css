@@ -181,22 +181,27 @@ body.thankyou div#content{
 body.package div#content {
 	background: #fff; 
 	width: 500px;
-	margin: 0 43px 0 200px;
+	margin: 0 43px 20px 220px;
 	float:right;
 	color: #666;
 }
-
-
-body.gallery div#content {
-	//width: auto;
-	padding-left: 60px;
-	//padding-right: 40px;
-	width:950px;
-}
-
 #content #inner{
 	padding: 40px 40px 40px 40px;
 }
+
+/* Gallery */
+body.gallery div#content {
+	width: auto;
+	margin:0 50px 0 220px;
+	//padding-left: 60px;
+	//padding-right: 40px;
+	//width:950px;
+}
+body.gallery #content #inner{
+	padding: 20px 20px 30px 20px;
+}
+/* End of Gallery */
+
 
 /* About */
 body.about div#content {
@@ -245,7 +250,7 @@ ul.list li{
 	padding:80px 0 0 0;
 }
 .gallery-canvas .fancybox-thumb{
-	margin:0 9px 6px 0 ;
+	margin:0 12px 8px 0 ;
 	display: block;
 	float:left;
 }

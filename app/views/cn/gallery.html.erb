@@ -10,16 +10,16 @@
 	                    return false; 
 	            });
 	        },
-	        padding : 0,
+	        padding : 10,
+	        closeBtn: false,
+	        arrows: true,
 					prevEffect	: 'none',
 					nextEffect	: 'none',
 					helpers	: {
 						title	: {
 							type: 'outside'
 						},
-						thumbs	: {
-							height	: 50
-						}
+					
 					}
 
 				});
@@ -33,6 +33,8 @@
 
 <div class="gallery-canvas">
 	<% @images_full.each do |image| %>
-   <%= link_to image_tag("gallery/thumbnail/#{image}", :height => '110'), "/assets/gallery/full/#{image}", :class=>'fancybox-thumb', :rel=>'fancybox-thumb'%>
+   <%= link_to image_tag("gallery/thumbnail/#{image}", :height => '180'), "/assets/gallery/full/#{image}", :class=>'fancybox-thumb', :rel=>'fancybox-thumb', 
+   				:title => image.split(".").first.split('_').map {|t| t.capitalize }.join(' ') %>
  	<% end %>
+ 	<div style="clear:both;"></div>
 </div>
