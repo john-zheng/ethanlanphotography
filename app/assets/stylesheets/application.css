@@ -77,7 +77,8 @@ body.about {
 	//background-image: url("about_bg_S.jpg");   	
 }
 body.contact, body.message, body.thankyou {
-	//background-image: url("contact_bg_S.jpg");   	
+	//background-image: url("contact_bg_S.jpg"); 
+	background: #353431; 	
 }
 body.package {
 	//background-image: url("package_bg_S.jpg");   	
@@ -175,7 +176,7 @@ body.contact div#content,
 body.message div#content, 
 body.thankyou div#content{
 	//background: rgba(0,0,0,0.5);
-	background: url("black.png"); 
+	//background: url("black.png"); 
 }
 
 body.package div#content {
